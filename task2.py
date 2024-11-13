@@ -31,3 +31,16 @@ Enter a number: 8
 Enter a number: 64
 64 is both a perfect square and divisible by 2.
 """
+import math
+
+x = int(input("Enter a number"))
+sqrtnum = math.sqrt(x)
+round(sqrtnum)
+print(sqrtnum)
+
+if sqrtnum.is_integer and x % 2 == 0:
+    print(f"{x} is both a perfect square and divisible by 2")
+    if  sqrtnum.is_integer and x % 2 == 1:
+        print(f"{x} is only a perfect square")
+else:
+    print(f"{x} is only divisible by 2")

@@ -36,11 +36,12 @@ import math
 x = int(input("Enter a number"))
 sqrtnum = math.sqrt(x)
 round(sqrtnum)
-print(sqrtnum)
 
-if sqrtnum.is_integer and x % 2 == 0:
+if sqrtnum.is_integer() and x % 2 == 0:
     print(f"{x} is both a perfect square and divisible by 2")
-    if  sqrtnum.is_integer and x % 2 == 1:
-        print(f"{x} is only a perfect square")
-else:
+
+if  sqrtnum.is_integer() and x % 2 == 1:
+    print(f"{x} is only a perfect square")
+
+if sqrtnum.is_integer() == False and x % 2 == 0:
     print(f"{x} is only divisible by 2")

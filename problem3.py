@@ -30,3 +30,17 @@ Enter an integer=>4
 Enter an integer=>2
 2,4,5 do not form a Pythagorean triple
 """
+
+a = float(input("Input the first side"))
+b = float(input("Input the second side"))
+c = float(input("Input the third side"))
+
+v1 = min(a,b,c)
+v3 = max(a,b,c)
+v2 = (a + b + c) - (v1+v3)
+
+if (v1 ** 2 + v2 ** 2) == (v3 ** 2):
+    print(f"{v1},{v2},{v3} form a Pythagorean Triple")
+
+else:
+    print(f"{v1},{v2},{v3} do not form a Pythagorean Triple")
